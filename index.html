@@ -56,4 +56,24 @@
         <div class="tooltip" id="tooltip"></div>
         <img src="africa-map.jpg" alt="Africa Map" usemap="#africa-map">
         <map name="africa-map">
-            <area shape="poly" coords="1158,740,752,438,1223,102,1343,612" alt="Algeria" href="algeria-heritage.html" onmouseover="show
+            <area shape="poly" coords="1158,740,752,438,1223,102,1343,612" alt="Algeria" href="algeria-heritage.html" onmouseover="showTooltip(event, 'Algerian heritage')" onmouseout="hideTooltip()">
+            <!-- Add more area tags for other regions -->
+        </map>
+    </section>
+
+    <script>
+        function showTooltip(event, text) {
+            var tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = text;
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+        }
+
+        function hideTooltip() {
+            var tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
