@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Heritage Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf5e6;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcccb;
+            padding: 20px;
+        }
+        header h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+            margin: 0;
+        }
+        .map {
+            margin: 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .map img {
+            width: 80%;
+            max-width: 800px;
+            border: 2px solid #ffcccb;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>African Heritage Project</h1>
+    </header>
+
+    <section class="map">
+        <h2>Explore African Heritage</h2>
+        <div class="tooltip" id="tooltip"></div>
+        <img src="africa-map.jpg" alt="Africa Map" usemap="#africa-map">
+        <map name="africa-map">
+            <area shape="poly" coords="x1,y1,x2,y2,..." alt="Region1" href="article1.html" onmouseover="showTooltip(event, 'Quick text about Region1')" onmouseout="hideTooltip()">
+            <area shape="poly" coords="x1,y1,x2,y2,..." alt="Region2" href="article2.html" onmouseover="showTooltip(event, 'Quick text about Region2')" onmouseout="hideTooltip()">
+            <!-- Add more area tags for other regions -->
+        </map>
+    </section>
+
+    <script>
+        function showTooltip(event, text) {
+            var tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = text;
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY + 10 + 'px';
+        }
+
+        function hideTooltip() {
+            var tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
