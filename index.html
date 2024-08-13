@@ -45,6 +45,38 @@
             border-radius: 10px;
             cursor: pointer;
         }
+        .content-section {
+            background-color: #f3f4ed;
+            padding: 30px;
+            border-top: 2px solid #ffcccb;
+            border-bottom: 2px solid #ffcccb;
+            margin-top: 20px;
+        }
+        .content-section h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2.2em;
+            color: #2b3d51;
+            margin-bottom: 20px;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        .links-grid a {
+            background-color: #ffcccb;
+            color: #2b3d51;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .links-grid a:hover {
+            background-color: #ff9999;
+        }
     </style>
 </head>
 <body>
@@ -57,9 +89,30 @@
         <div class="tooltip" id="tooltip"></div>
         <img src="africa-map.jpg" alt="Africa Map" usemap="#africa-map">
         <map name="africa-map">
-            <area shape="poly" coords="1158,740,752,438,1223,102,1343,612" alt="Algeria" href="algeria-heritage.html" onmouseover="showTooltip(event, 'Algerian heritage')" onmouseout="hideTooltip()" onclick="window.location.href='algeria-heritage.html'">
+            <area shape="poly" coords="1158,740,752,438,1223,102,1343,612" alt="Algeria" href="https://slade232323.github.io/ancestry-project/algeria-heritage.html" onmouseover="showTooltip(event, 'Algerian heritage')" onmouseout="hideTooltip()" onclick="window.location.href='https://slade232323.github.io/ancestry-project/algeria-heritage.html'">
             <!-- Add more area tags for other regions -->
         </map>
+    </section>
+
+    <section class="content-section">
+        <h2>Heritage Pages</h2>
+        <div class="links-grid">
+            <a href="https://slade232323.github.io/ancestry-project/egypt.html">Egypt</a>
+            <a href="https://slade232323.github.io/ancestry-project/morocco.html">Morocco</a>
+            <a href="https://slade232323.github.io/ancestry-project/nigeria.html">Nigeria</a>
+            <a href="https://slade232323.github.io/ancestry-project/ethiopia.html">Ethiopia</a>
+            <a href="https://slade232323.github.io/ancestry-project/kenya.html">Kenya</a>
+            <a href="https://slade232323.github.io/ancestry-project/ghana.html">Ghana</a>
+            <a href="https://slade232323.github.io/ancestry-project/south_africa.html">South Africa</a>
+            <a href="https://slade232323.github.io/ancestry-project/senegal.html">Senegal</a>
+            <a href="https://slade232323.github.io/ancestry-project/ivory_coast.html">Ivory Coast</a>
+            <a href="https://slade232323.github.io/ancestry-project/sudan.html">Sudan</a>
+            <a href="https://slade232323.github.io/ancestry-project/uganda.html">Uganda</a>
+            <a href="https://slade232323.github.io/ancestry-project/tunisia.html">Tunisia</a>
+            <a href="https://slade232323.github.io/ancestry-project/angola.html">Angola</a>
+            <a href="https://slade232323.github.io/ancestry-project/tanzania.html">Tanzania</a>
+            <a href="https://slade232323.github.io/ancestry-project/mali.html">Mali</a>
+        </div>
     </section>
 
     <script>
